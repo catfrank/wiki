@@ -1,3 +1,12 @@
-site_name: My Docs
+site_name: 飘 | 知识仓库
+
 theme:
   name: 'material'
+
+nav:
+  - 首页: index.md
+  - 计算机基础:
+    - MySQL 数据库: MySQL数据库.md
+  - 知识管理:
+    - MkDocs 常用操作: MkDocs常用操作.md
+    - Hexo 常用操作: Hexo常用操作.md

@@ -3,3 +3,7 @@
 ## 启动服务
 
 在 mkdocs.yml 同级文件夹下输入 `mkdocs serve`
+
+## 部署
+
+在 mkdocs.yml 同级文件夹下输入 `mkdocs gh-deploy`

@@ -1,0 +1,3 @@
+workon wiki
+
+mkdocs serve

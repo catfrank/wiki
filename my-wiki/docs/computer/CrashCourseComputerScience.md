@@ -1,19 +1,27 @@
 # Crash Course Computer Science
 
+视频地址：[https://www.bilibili.com/video/BV1EW411u7th/](https://www.bilibili.com/video/BV1EW411u7th/)
+
 参考笔记：[https://shimo.im/docs/vkCKkj3YxGtygrVg/read](https://shimo.im/docs/vkCKkj3YxGtygrVg/read)
 [https://shimo.im/docs/PJAUY30F1uYksv0h/read](https://shimo.im/docs/PJAUY30F1uYksv0h/read)
 
+Github 字幕组翻译仓库：[https://github.com/1c7/Crash-Course-Computer-Science-Chinese/tree/master](https://github.com/1c7/Crash-Course-Computer-Science-Chinese/tree/master)
+
+思维导图地址：[https://www.processon.com/view/link/61ef6e8f0e3e7439ae917672#map](https://www.processon.com/view/link/61ef6e8f0e3e7439ae917672#map)
+
+<iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:489px; height:500px;" src="https://www.processon.com/embed/61e8cc1be0b34d616d2f112b"></iframe>
+
 ## 第 1 集：计算机早期历史
 
-提到的设备：算盘 → 步进计算器 → 差分机 → 分析机 → 打孔卡片制表机 
+提到的设备：算盘 → 步进计算器 → 差分机 → 分析机 → 打孔卡片制表机  
 提到的人名：Charles Babbage, Ada Lovelace
 
-02:27 最早的计算设备是算盘，举例如何使用 
-04:31 Computer 从指代职业变成指代机器 
-04:57 机器里有名的是：步进计算器。第一个可以做加减乘除的机器
-06:44 炮弹为了精准，要计算弹道，二战是查表来做。但每次改设计了就需要做一张新表
-07:30 Charles Babbage 提出了 差分机, 在构造差分机期间，想出了分析机, 分析机是通用计算机 
-08:50 Lovelace 给分析机写了假想程序，因此成为了第一位程序员 
+02:27 最早的计算设备是算盘，举例如何使用  
+04:31 Computer 从指代职业变成指代机器  
+04:57 机器里有名的是：步进计算器。第一个可以做加减乘除的机器  
+06:44 炮弹为了精准，要计算弹道，二战是查表来做。但每次改设计了就需要做一张新表    
+07:30 Charles Babbage 提出了 差分机, 在构造差分机期间，想出了分析机, 分析机是通用计算机   
+08:50 Lovelace 给分析机写了假想程序，因此成为了第一位程序员  
 09:25 人口普查 10 年一次. Herman Hollerith 的打孔卡片制表机大大提升了效率
 
 ### 0、课程目标：
@@ -152,6 +160,7 @@
 作用：将逻辑门简化，将逻辑门用于构建更大的组件，而不至于太复杂。
 
 图示：
+
 - 非门：用三角形+圆圈表示
 - 与门：用D型图案表示
 - 或门：用类似D向右弯曲的图案表示
@@ -180,21 +189,23 @@
 1byte=8bit，即 **1byte 代表 8 位数字**。最早期的电脑为八位的，即以八位为单位处理数据。为了方便，将八位数字命名为 1 字节（1byte）.
 
 十进制与二进制的区别：
+
 - 十进制有 10 个数字，0-9，**逢 10 进 1**（不存在 10 这个数字），则每向左进一位，数字大 10 倍。
 - 二进制有 2 个数字，0-1，**逢 2 进 1**,（不存在 2 这个数字），则每向左进一位，数字大 2 倍。
 
 如何进行二进制与十进制联系起来：
+
 - 将十进制与二进制的位数提取出来，编上单位：
 eg.二进制的 1011=1*2^0 + 1*2^1 + 0*2^2 + 1*2^3= 11（从右往左数）
 eg.十进制的 1045= 1*10^3 + 0*10^2 + 4*10^1 + 5*10^0
 
-byte 在电脑中的单位换算：
-1kb=2^10bit = 1024byte =1000b
-1TB=1000GB
+byte 在电脑中的单位换算：  
+1kb=2^10bit = 1024byte =1000b  
+1TB=1000GB  
 1GB=十亿字节=1000MB=10^6KB
 
-32 位与 64 位电脑的区别：
-32 位的最大数为 43 亿左右 32 位能表示的数字：0——2的32次方-1，一共2的32次方个数
+32 位与 64 位电脑的区别：  
+32 位的最大数为 43 亿左右 32 位能表示的数字：0——2的32次方-1，一共2的32次方个数  
 64 位的最大数为 9.2*10^18
 
 ### 2、正数、负数、正数、浮点数的表示
@@ -203,15 +214,17 @@ byte 在电脑中的单位换算：
 
 整数：
 表示方法:
+
 - **第 1 位：表示正负 1 是负，0 是正**（补码）
 - 其余 31 位/63 位： 表示实数
 
-浮点数（Floating Point Numbers）：
-定义：**小数点可在数字间浮动的数**（非整数）
-表示方法：IEEE 754 标准下
+浮点数（Floating Point Numbers）：  
+定义：**小数点可在数字间浮动的数**（非整数）  
+表示方法：IEEE 754 标准下  
 用类似科学计数法的方式，存储十进制数值
+
 - 浮点数=有效位数*指数
-- 32 位数字中：第 1 位表示正负，第 2-9 位存指数。剩下 23 位存有效位数
+- 32 位数字中：第 1 位表示正负，第 2-9 位存指数。剩下 23 位存有效位数  
 eg.625.9=0.6259（有效位数）*10^3（指数）
 
 ### 3、美国信息交换标准代码-ASCⅡ，用来表示字符
@@ -224,26 +237,26 @@ eg.625.9=0.6259（有效位数）*10^3（指数）
 
 ### 4、UNICODE，统一所有字符编码的标准
 
-诞生背景：1992 诞生，随着计算机在亚洲兴起，需要解决 ASCⅡ不够表达所有语言的问题。
+诞生背景：1992 诞生，随着计算机在亚洲兴起，需要解决 ASCⅡ不够表达所有语言的问题。  
 为提高代码的互用性，而诞生的编码标准。
 
 内容：UNICODE 为 17 组的 16 位数字，有超过 100 万个位置，可满足所有语言的字符需求。
 
 ## 第 5 集：算数逻辑单元 - ALU
 
-00:03 简单介绍 ALU ，英特尔 74181 
+00:03 简单介绍 ALU ，英特尔 74181   
 01:24 ALU 有 2 个单元，1 个算术单元和 1 个逻辑单元
 
-01:32 算术单元 
-半加器 (处理1个 bit，2个输入) 
-全加器 (处理1个 bit，3个输入) 
-8 bit 加法 (1个半加器，7个全加器） 
-溢出的概念，吃豆人的例子 
+01:32 算术单元   
+半加器 (处理1个 bit，2个输入)   
+全加器 (处理1个 bit，3个输入)   
+8 bit 加法 (1个半加器，7个全加器）   
+溢出的概念，吃豆人的例子   
 乘法除法
 
-07:32 逻辑单元 
-检测数字是否为 0 的电路（一堆 OR 门最后加个 NOT 门） 
-ALU 抽象成一个 V 符号 
+07:32 逻辑单元   
+检测数字是否为 0 的电路（一堆 OR 门最后加个 NOT 门）   
+ALU 抽象成一个 V 符号   
 Flag 标志（是否相等，是否小于，是否溢出等等）
 
 ### 1、什么是算术逻辑单元
@@ -257,14 +270,16 @@ Flag 标志（是否相等，是否小于，是否溢出等等）
 ### 2、算术单元
 
 1）基本组件：
+
 - 由半加器、全加器组成
 - 半加器、全加器由 AND、OR、NOT、XOR 门组成
 
-2）加法运算
-组件：AND、OR、NOT、XOR 门
+2）加法运算  
+组件：AND、OR、NOT、XOR 门  
 元素：输入 A，输入 B，输出（均为 1 个 bit，即 0 或 1）
 
 半加器：
+
 - 作用：用于计算个位的数字加减。
 - 输入：A，B
 - 输出：总和，进位
@@ -279,12 +294,13 @@ carry：进位
 3）如何用半加器与全加器做 8 位数的加法
 ![NOT](CrashCourseComputerScience/9.png)
 说明：以 8 位行波加法器为例
+
 1. 用半加器处理第 1 位数（个位）的加法，得到的和为结果的第 1 位。
 2. 将输出的进位，输入到第 2 位用的全加器的输入 C 中。
 3. 将第 2 位的 2 个数用全加器计算，得到的和为结果的第 2 位（sum）。
 4. 将第 2 位计算的进位连接到百位的全加器输入 C 中。
 5. 在第 3-8 位上，循环第 3-4 步的操作。
-*现在电脑使用的加法器叫“**超前进位加法器**”
+现在电脑使用的加法器叫“**超前进位加法器**”
 
 ### 3、溢出的概念
 
@@ -331,17 +347,18 @@ carry：进位
 
 ### 0、课程导入
 
-当玩游戏、写文档时如果断电，进度会丢失，这是为什么？
-- 原因是这是电脑使用的是 RAM（随机存取存储器），俗称内存，内存只能在通电情况下存储数据。
+当玩游戏、写文档时如果断电，进度会丢失，这是为什么？  
+
+- 原因是这是电脑使用的是 RAM（随机存取存储器），俗称内存，内存只能在通电情况下存储数据。  
 - 本节课程将讲述内存的工作原理。
 
 ### 1、概念梳理
 
-锁存器：锁存器是利用 AND、OR、NOT 逻辑门，实现存储 1 位数字的器件。
-寄存器：1 组并排的锁存器
-矩阵：以矩阵的方式来存放锁存器的组合件，n*n 门锁矩阵可存放 n^2 个锁存器，但同一时间只能写入/读取 1 个数字。（早期为 16*16 矩阵）
-位址：锁存器在矩阵中的行数与列数。eg.12 行 8 列
-多路复用器：一组电线，输入 2 进制的行址&列址，可启用矩阵中某个锁存器
+锁存器：锁存器是利用 AND、OR、NOT 逻辑门，实现存储 1 位数字的器件。  
+寄存器：1 组并排的锁存器  
+矩阵：以矩阵的方式来存放锁存器的组合件，n*n 门锁矩阵可存放 n^2 个锁存器，但同一时间只能写入/读取 1 个数字。（早期为 16*16 矩阵）  
+位址：锁存器在矩阵中的行数与列数。eg.12 行 8 列  
+多路复用器：一组电线，输入 2 进制的行址&列址，可启用矩阵中某个锁存器  
 内存（RAM）：随机存取存储器，由一系列矩阵以及电路组成的器件，可根据地址来写入、读取数据。类似于人类的短期记忆，记录当前在做什么事情。
 
 ### 2、锁存器
@@ -929,3 +946,338 @@ beta版软件，即是软件接近完成，但没有完全被测试过，公司�
 ### 10、Unix
 
 把操作系统分成两个部分，一个是操作系统的核心部分，如内存管理，多任务和输入/输出处理，这叫做“内核”，第二部分是一堆有用的工具，比如程序和运行库。
+
+## 第 19 集：内存&储存介质
+
+本集重点：存储技术的发展  
+
+01:01  纸卡                Paper punch cards  
+02:01  延迟线存储器  Delay Line Memory  
+04:06  磁芯               Magnetic Core Memory  
+06:08  磁带               Magnetic Tape  
+07:08  磁鼓               Magnetic Drum Memory  
+07:43  硬盘               Hard Disk Drives  
+08:53  内存层次结构  Memory Hierarchy  
+09:36  软盘                Floppy Disk  
+10:09  光盘                Compact Disk  
+10:51  固态硬盘         Solid State Drives  
+
+## 第 20 集：文件系统
+
+00:47  文件格式：可以随便存文件数据，但按格式存会更方便  
+01:00  TXT   文本文件：ASCII  
+01:31  WAV 音频文件：每秒上千次的音频采样数字  
+02:47  BMP  图片文件：像素的红绿蓝 RGB 值  
+04:43  文件系统：很早期时空间小，整个存储器就像一整个文件。后来随容量增长，多文件非常必要  
+05:37  目录文件：用来解决多文件问题，存其他文件的信息，比如开头，结尾，创建时间等  
+06:39  平面文件系统 - Flat File System：文件都在同一个层次，早期空间小，只有十几个文件，平面系统够用  
+06:57  如果文件紧密的一个个前后排序会造成问题，所以文件系统会： 1. 把空间划分成一块块  2. 文件拆分存在多个块里  
+08:30  文件的增删改查会不可避免的造成文件散落在各个块里，  
+如果是磁带这样的存储介质就会造成问题，所以做碎片整理  
+09:46  分层文件系统 - Hierarchical File System：有不同文件夹，文件夹可以层层嵌套  
+
+## 第 21 集：压缩
+
+00:26  压缩的好处是能存更多文件，传输也更快  
+01:52  游程编码   Run-Length Encoding  
+02:45  无损压缩   Lossless compression  
+03:55  霍夫曼树   Huffman Tree  
+05:56  消除冗余和用更紧凑的表示方法，这两种方法通常会组合使用  
+06:07  字典编码   Dictionary coders,  游程编码 和 字典编码 都是无损压缩  
+08:03  感知编码   Perceptual coding  
+08:09  有损压缩   jpeg 格式  
+09:39  时间冗余   Temporal redundancy  
+10:30  MPEG-4 视频编码  
+
+### 1、 游程编码 Run-Length Encoding
+
+适合经常出现相同值的文件
+
+### 2、 霍夫曼树 Huffman Tree
+
+一种高效的编码模式
+
+### 3、感知编码 Perceptual coding
+
+删掉人类无法感知的数据的有损压缩方法，叫做“感知编码”，如音频文件，人类听不到超声波，所以可以舍去，MP3就是音频的一种压缩形式。
+
+### 4、时间冗余 Temporal redundancy
+
+一个视频由很多图片构成，其中很多图片的背景一样，这就构成了时间冗余，很多视频编码格式，只存变化的部分。进阶的视频压缩模式会找到帧与帧的相似性，然后打补丁，MPEG-4 是视频压缩的常见标准。
+
+## 第 22 集：命令行界面
+
+本集重点：计算机早期同时输入程序和数据（用纸卡/纸带）  
+运行开始直到结束，中间没有人类进行操作，  
+原因是计算机很贵，不能等人类慢慢输入，执行完结果打印到纸上 (02:34)  
+
+到1950年代，计算机足够便宜+快，人类和计算机交互式操作变得可行  
+为了让人类输入到计算机，改造之前就有的打字机，变成电传打字机 (02:44~05:38)  
+到1970年代末，屏幕成本足够低，屏幕代替电传打字机，屏幕成为标配 (07:24)  
+
+00:32  人机交互  Human-Computer Interaction  
+00:50  早期输出数据是打印到纸上，而输入是用纸卡/纸带一次性把程序和数据都给进去  
+03:00  QWERTY  打字机的发展，克里斯托弗·莱瑟姆·肖尔斯 发明于 1868 年  
+05:38  电传打字机  Teletype machine  
+06:32  命令行界面  Command line interface  
+06:38  ls 命令  
+08:22  早期文字游戏  Zork  (1977年)  
+08:47  cd 命令  
+
+## 第 23 集：屏幕与 2D 图形显示
+
+00:05   PDP-1 计算机。键盘和显示器分开，屏幕显示临时值  
+01:14   阴极射线管  Cathode Ray Tube (CRT)  
+01:38   CRT 有两种绘图方式：  
+矢量扫描  Vector Scanning  
+光栅扫描  Raster Scanning  
+
+02:14   液晶显示器   Liquid Crystal Displays (LCD)，像素 (Pixel)  
+03:32   字符生成器   Character generator  
+03:45   屏幕缓冲区   Screen buffer  
+05:09   矢量命令画图  
+06:34   Sketchpad,  光笔 (Light pen)  
+09:00   函数画线，矩形  
+
+## 第 24 集：冷战和消费主义
+
+本集重点：冷战导致美国往计算机领域投入大量资源  (00:00~01:43)  
+
+范内瓦·布什 预见了计算机的潜力，提出假想机器 Memex  
+帮助建立 国家科学基金会，给科学研究提供资金  (01:43~03:43)  
+
+1950 年代消费者开始买晶体管设备，收音机大卖  
+日本取得晶体管授权后，索尼做了晶体管收音机，为日本半导体行业崛起埋下种子 (03:43~04:29）  
+
+苏联 1961 年把宇航员加加林送上太空，导致美国提出登月  
+NASA 预算大大增加，用集成电路来制作登月计算机 (04:29~06:27)  
+
+集成电路的发展实际上是由军事应用大大推进的，阿波罗登月毕竟只有 17 次  
+美国造超级计算机进一步推进集成电路 (04:29~07:11)  
+
+美国半导体行业一开始靠政府高利润合同活着，忽略消费者市场，1970年代冷战渐消，行业开始衰败  
+很多公司倒闭，英特尔转型处理器 (07:11~08:23)  
+
+末尾总结：政府和消费者推动了计算机的发展  
+早期靠政府资金，让技术发展到足够商用，然后消费者购买商用产品继续推动产品发展 (08:23~10:41)  
+
+## 第 25 集：个人计算机革命
+
+本集：全是历史故事  
+00:18   1970年代初成本下降，个人计算机变得可行  
+01:51   Altair 8800  
+02:32   比尔·盖茨 和 保罗·艾伦写 BASIC 解释器  
+03:45   乔布斯提议卖组装好的计算机，Apple-I 诞生  
+04:40   1977年出现3款开箱即用计算机：  
+Apple-II,TRS-80 Model I,Commodore PET 2001
+
+06:26   IBM 意识到个人计算机市场  
+IBM PC 发布，采用开放架构，兼容的机器都叫 IBM Compatible (IBM 兼容)  
+生态系统产生雪球效应：  
+因为用户多，软硬件开发人员更愿意花精力在这个平台  
+因为软硬件多，用户也更乐意买 IBM 兼容的计算机  
+
+08:44   苹果选封闭架构，一切都自己来，只有苹果在非 IBM 兼容下保持了足够市场份额  
+
+## 第 26 集：图形用户界面 (GUI)
+
+01:10  图形界面先驱：道格拉斯·恩格尔巴特（Douglas Engelbart）  
+03:20  1970年成立 帕洛阿尔托研究中心（Palo Alto Research Center）  
+03:29  1973年完成 Xerox Alto(施乐奥托) 计算机  
+04:42  举例：写一个简单的 GUI 程序  
+06:38  1981年的 Xerox Star system(施乐之星系统)  
+08:18  史蒂夫·乔布斯去施乐参观  
+07:45  所见即所得 WYSIWYG  
+09:15  1983年推出 Apple Lisa  
+09:31  1984年推出 Macintosh  
+10:12  1985年推出 Windows 1.0，之后出到 3.1  
+10:43  1995年推出 Windows 95 提供图形界面  
+11:08  1995年微软做失败的 Microsoft Bob  
+
+## 第 27 集：3D 图形
+
+01:15   线框渲染  Wireframe Rendering  
+01:39   正交投影  Orthographic Projection  
+01:50   透视投射  Perspective Projection  
+02:14   网格  Mesh  
+02:37   三角形更常用因为能定义唯一的平面  
+03:09   扫描线渲染  Scanline Rendering  
+05:04   遮挡            Occlusion  
+05:19   画家算法     Painter&apos;s Algorithm  
+06:09   深度缓冲      Z Buffering  
+07:45   Z Fighting 错误  
+07:51   背面剔除      Back Face Culling  
+08:53   表面法线      Surface Normal  
+09:33   平面着色      Flat Shading  
+09:43   高洛德着色   Gouraud shading,  冯氏着色  Phong Shading  
+10:06   纹理映射      Texture Mapping  
+11:24   图形处理单元  GPU, Graphics Processing Unit 
+
+## 第 28 集：计算机网络
+
+02:05   局域网   Local Area Networks - LAN  
+02:36   媒体访问控制地址   Media Access Control address - MAC  
+02:55   载波侦听多路访问   Carrier Sense Multiple Access - CSMA  
+05:18   指数退避   Exponential Backoff  
+05:36   冲突域       Collision Domain  
+07:08   电路交换   Circuit Switching  
+07:36   报文交换   Message Switching  
+10:20   分组交换   Packet Switching  
+
+## 第 29 集：互联网
+
+02:23  IP - 互联网协议 - Internet Protocol  
+03:00  UDP - 用户数据报协议 - User Datagram Protocol  
+03:41  校验和 - Checksum  
+05:26  TCP - 传输控制协议 - Transmission Control Protocol  
+08:21  DNS - 域名系统 - Domain Name System  
+10:47  OSI - 开放式系统互联通信参考模型 - Open System Interconnection  
+
+## 第 30 集：万维网
+
+01:01  超链接  Hyperlinks  
+02:20  URL - 统一资源定位器 - Uniform Resource Locator  
+03:01  HTTP - 超文本传输协议 -  HyperText Transfer Protocol  
+04:13  HTML - 超文本标记语言  - HyperText Markup Language  
+04:24  写一个简单网页，用到了 &lt;h1&gt; &lt;a&gt; &lt;h2&gt; &lt;ol&gt; &lt;li&gt; 标签  
+06:04  第一个浏览器和服务器是 Tim Berners-Lee 花了 2 个月在 CERN 写的  
+06:32  1991年正式发布，万维网就此诞生  
+07:19  开始讲搜索引擎的故事  
+07:40  Jerry 和 David 的万维网指南 后来改名成 Yahoo  
+07:52  搜索引擎  JumpStation  
+09:07  搜索引擎  Google  
+09:20  网络中立性  
+
+## 第 31 集：计算机安全
+
+01:00   Secrecy, Integrity, Availability  
+保密性, 完整性, 可用性  
+01:49   Threat Model 威胁模型  
+
+03:14   身份验证 (Authentication) 的三种方式：  
+What you know, 你知道什么  
+What you have, 你有什么  
+What you are, 你是什么  
+
+07:34   访问控制   Access Control  
+08:48   Bell LaPadula model  不能向上读取，不能向下写入  
+11:00   隔离 Isolation, 沙盒 Sandbox  
+
+## 第 32 集：黑客与攻击
+
+01:28  社会工程学   Social Engineering  
+01:38  钓鱼             Phishing  
+02:06  假托             Pretexting  
+02:50  木马             Trojan Horses  
+03:32  NAND镜像  NAND Mirroring  
+04:12  漏洞利用      Exploit  
+04:16  缓冲区溢出   Buffer Overflow  
+05:45  边界检查      Bounds Checking  
+06:16  代码注入      Code Injection  
+09:32  零日漏洞      Zero Day Vulnerability  
+09:53  计算机蠕虫   Worms  
+09:58  僵尸网络      Botnet  
+10:11  拒绝服务攻击   DDoS  
+
+## 第 33 集：加密
+
+00:16  多层防御  Defence in depth  
+01:00  加密 - Encryption，解密 - Decryption  
+01:11  凯撒加密  Caesar cipher  
+01:27  替换加密  Substitution cipher  
+01:59  移位加密  Permutation cipher  
+02:03  列移位加密  Columnar transposition cipher  
+02:37  德国 Enigma 加密机  
+04:54  1977年数据加密标准 - Data Encryption Standard (DES)  
+05:24  2001年高级加密标准 - Advanced Encryption Standard (AES)  
+07:06  密钥交换 - Key exchange  
+07:33  用颜色来举例单向函数和密钥加密的原理  
+08:24  迪菲-赫尔曼密钥交换 - Diffie-Hellman Key Exchange  
+10:18  非对称加密 - Asymmetric encryption  
+11:22  非对称加密算法  RSA  
+
+## 第 34 集：机器学习与人工智能
+
+01:23   分类              Classification  
+01:25   分类器           Classifier  
+01:34   特征               Feature  
+02:03   标记数据        Labeled data  
+02:38   决策边界        Decision boundaries  
+03:00   混淆矩阵        Confusion matrix  
+03:39   未标签数据     Unlabeled data  
+03:49   决策树            Decision tree  
+04:25   支持向量机     Support Vector Machines  
+05:52  人工神经网络   Artificial Neural Network  
+08:34  深度学习         Deep learning  
+09:21  弱AI, 窄AI      Weak AI, Narrow AI  
+09:43  强AI               Strong AI  
+10:42  强化学习         Reinforcement Learning  
+
+## 第 35 集：计算机视觉
+
+02:41  检测垂直边缘的算法  
+03:26  核/过滤器  kernel or filter  
+03:56  卷积 convolution  
+04:23  Prewitt 算子   Prewitt Operators  
+05:34  维奥拉·琼斯 人脸检测   Viola-Jones Face Detection  
+05:35  卷积神经网络   Convolutional Neural Networks  
+07:33  识别出脸之后，可以进一步用其他算法定位面部标志，如眼睛和眉毛具体位置，从而判断心情等信息  
+08:52  跟踪全身的标记点，如肩部，手臂等  
+
+## 第 36 集：自然语言处理
+
+01:50  词性                   Parts of speech  
+02:15  短语结构规则      Phrase structure rules  
+02:32  分析树                Parse tree  
+05:30  语音识别             Speech recognition  
+07:26  谱图                    Spectrogram  
+07:44  快速傅立叶变换   Fast Fourier Transform  
+08:42  音素                   Phonemes  
+09:29   语音合成           Speech Synthesis  
+
+## 第 37 集：机器人
+
+02:08  法国吃饭鸭 - Digesting Duck, Canard Digerateur  
+02:23  土耳其行棋傀儡, 下国际象棋  
+02:43  第一台计算机控制的机器出现在1940年代晚期，叫数控机器, Computer Numerical Control(CNC)  
+03:32  1960年 Unimate，第一个商业贩卖的 可编程工业机器人  
+03:47  简单控制回路  simple control loop  
+04:08  负反馈回路  negative feedback loop  
+05:17  比例-积分-微分控制器   Proportional–Integral–Derivative controller   PID 控制器  
+10:48  机器人三定律   Three Laws of Robotics  
+
+## 第 38 集：计算机心理学
+
+00:45  我们需要了解人类心理学，做出更好的计算机  
+01:12  易用度 - Usability  
+01:31  颜色强度排序 和 颜色排序  
+02:30  分组更好记，电话号码 317-555-3897 比 3175553897 好记  
+03:25  直观功能 - Affordances  
+04:33  认出 vs 回想 Recognition vs Recall  
+05:45  让机器有一定情商以及 Facebook 的研究  
+08:40  用软件修正注视位置。让视频通话时看起来像盯着对方，而不是盯着下方  
+09:58  把机器人做的像人，恐怖谷理论  
+11:35  有很多开放式的问题，心理学帮助我们明白不同选择可能带来的影响  
+
+## 第 39 集：教育科技
+
+02:15  通过调速，暂停等技巧，加强学习效率  
+03:15  大型开放式在线课程  - Massive Open Online Courses  (MOOC)  
+05:08  智能辅导系统 - Intelligent Tutoring Systems  
+05:22  判断规则 - Production rule  
+06:10  域模型 - Domain Model  
+06:46  贝叶斯知识追踪  Bayesian knowledge tracing  
+
+1. 学生已经学会的概率  
+2. 瞎猜的概率  
+3. 失误的概率  
+4. 做题过程中学会的概率  
+
+09:27  教育数据挖掘  Educational Data Mining  
+
+## 第 40 集：奇点，天网，计算机的未来
+
+01:21  普适计算  Ubiquitous Computing  
+04:55  奇点         Singularity  
+06:51  把工作分为4个象限，讨论自动化带来的影响  
+10:15  机器人的存在时间可能长过人类，可以长时间探索宇宙  

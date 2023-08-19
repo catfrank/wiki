@@ -6,4 +6,5 @@
 
 ## 部署
 
+先 git push
 在 mkdocs.yml 同级文件夹下输入 `mkdocs gh-deploy`

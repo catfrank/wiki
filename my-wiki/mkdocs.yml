@@ -11,7 +11,9 @@ nav:
   - 工具仓库:
     - MkDocs 常用操作: tool/MkDocs常用操作.md
     - Hexo 常用操作: tool/Hexo常用操作.md
+    - MarkDown 常用操作: tool/MarkDown.md
   - 慕课笔记:
-    - 计算机速成课: computer/CrashCourseComputerScience.md
+    - 10分钟速成课:计算机科学: computer/CrashCourseComputerScience.md
+    - 10分钟速成课:学习技能: mess/CrashCourseLearningSkill.md
   - 家电知识:
     - 空调爆炸图: mess/aircondition.md

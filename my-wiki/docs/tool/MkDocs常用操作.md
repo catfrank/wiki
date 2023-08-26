@@ -7,4 +7,5 @@
 ## 部署
 
 先 git push
+再进入虚拟环境 workon wiki
 在 mkdocs.yml 同级文件夹下输入 `mkdocs gh-deploy`
